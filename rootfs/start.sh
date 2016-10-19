@@ -5,7 +5,7 @@ set -e
 export JOINED_VCL_FILE=$VCL_CONFIG
 
 if [ -d "$VCL_CONFIG" ]; then
-    source varnish-join-vcl.sh
+    source /varnish-join-vcl.sh
 fi
 
 exec varnishd -F \
