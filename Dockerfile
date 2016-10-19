@@ -7,7 +7,7 @@ ENV "VARNISH_VERSION=3.0.6" \
     "CACHE_SIZE=64m" \
     "VARNISHD_PARAMS=-p default_ttl=3600 -p default_grace=3600"
 
-ADD rootfs /
+COPY rootfs /
 
 RUN yum install -y \
     varnish-${VARNISH_VERSION} \
