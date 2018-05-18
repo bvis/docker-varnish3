@@ -14,6 +14,8 @@ RUN curl -s https://packagecloud.io/install/repositories/varnishcache/varnish30/
     varnish-${VARNISH_VERSION} \
     /varnish-vmod-header-0.3-0.6.git20150319.softonic6.x86_64.rpm
 
+COPY varnish_exporter /varnish_exporter
+
 EXPOSE 80
 
 ENTRYPOINT ["/start.sh"]
