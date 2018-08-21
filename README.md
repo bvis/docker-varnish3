@@ -54,3 +54,6 @@ docker run -d -it -P --name varnish3 \
 
 `$CACHE_SIZE`:      Determines the cache size used by varnish
 `$VARNISHD_PARAMS`: Other parameters you want to pass to the varnish daemon
+`$VARNISH_PARAM_*`: Any environment variable with this prefix can be used to substitute its value in a VCL with a placeholder with the same name.
+  For example if your VCL contains something like: `.host = "#VARNISH_PARAM_SERVICE#";` and you have an environment variable like `VARNISH_PARAM_SERVICE=my_svc`
+  you'll end up with `.host = "my_svc";`
