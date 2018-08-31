@@ -12,7 +12,8 @@ COPY rootfs /
 RUN curl -s https://packagecloud.io/install/repositories/varnishcache/varnish30/script.rpm.sh | bash \
  && yum install -y \
     varnish-${VARNISH_VERSION} \
-    /varnish-vmod-header-0.3-0.6.git20150319.softonic6.x86_64.rpm
+    /varnish-vmod-header-0.3-0.6.git20150319.softonic6.x86_64.rpm \
+    varnish-agent
 
 COPY varnish_exporter /varnish_exporter
 
